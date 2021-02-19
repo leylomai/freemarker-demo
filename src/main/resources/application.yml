@@ -1,0 +1,10 @@
+server:
+  port: 8906
+
+spring:
+  application:
+    name: freemarkerdemo
+  freemarker:
+    template-loader-path: classpath:/static/ft
+    charset: UTF-8
+    suffix: .ftl
