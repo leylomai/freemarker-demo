@@ -1,7 +1,10 @@
 package com.example.freemarkerdemo.controller;
 
 import com.example.freemarkerdemo.entity.GoodsInfo;
+import com.example.freemarkerdemo.entity.Order;
 import com.example.freemarkerdemo.entity.PayedOrder;
+import com.sun.org.apache.xpath.internal.operations.Or;
+import freemarker.cache.StringTemplateLoader;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -123,6 +126,50 @@ public class DemoController {
             e.printStackTrace();
         }
 
+        return "end";
+    }
+
+    @RequestMapping(value = "/freemarker/demo1")
+    public String demo1() {
+        try {
+            StringTemplateLoader stringTemplateLoader = new StringTemplateLoader();
+            stringTemplateLoader.putTemplate("demo1", "<!DOCTYPE html> <html lang=\"en\"> <head> <style type=\"text/css\"> table { border-collapse:collapse; }  table, td, th { border:1px solid black; } </style> </head> <body> <div style=\"width: 800px; margin: 0 auto;\">   <h3>新增订单提示</h3> <p>中国移动物联卡能力开放平台（<a style=\"color: #1875f0;\" href=\"https://api.iot.10086.cn\">https://api.iot.10086.cn</a>）收到${custName}的订单，共${goodsNum}个商品，总金额为${totalPrice}元，列表如下:</p> <table> <tbody> <tr> <th>商品名称</th> <th>数量</th> <th>资费包名称</th> <th>订单编号</th> <th>创建时间</th> </tr> <#list orderList as order> <tr> <td>${order.goodsName}</td> <td>${order.num}</td> <td>${order.packageName}</td> <td>${order.orderPkgNum}</td> <td>${order.createTime}</td> </tr> </#list>            </tbody> </table> <br/> <br/> <p>创建时间:${createTime}</p> <p>付款时间:${paymentTime}</p> <p style=\"text-align: right;\">${postTime}</p> </div> </body> </html>");
+
+            configuration.setTemplateLoader(stringTemplateLoader);
+
+            Template template = configuration.getTemplate("demo1");
+
+            Map<String, Object> map = new HashMap<>();
+            map.put("custName", "中移物联网");
+            map.put("goodsNum", "1");
+            map.put("totalPrice", "10000");
+
+            List<Order> list = new ArrayList<>();
+            Order order = new Order();
+            order.setGoodsName("111");
+            order.setCreateTime("111");
+            order.setNum("111");
+            order.setOrderPkgNum("111");
+            order.setPackageName("111");
+            list.add(order);
+            Order order1 = new Order();
+            order1.setGoodsName("111");
+            order1.setCreateTime("111");
+            order1.setNum("111");
+            order1.setOrderPkgNum("111");
+            order1.setPackageName("111");
+            list.add(order1);
+
+            map.put("orderList", list);
+            map.put("createTime", "2021-03-02 22:15:00");
+            map.put("paymentTime", "2021-03-02 22:15:00");
+            map.put("postTime", "2021-03-02 22:15:00");
+
+            template.process(map, new FileWriter(new File("E:\\testFreeMarker1.html"), false));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return "end";
     }
 }
