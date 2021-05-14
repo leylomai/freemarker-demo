@@ -1,0 +1,17 @@
+
+_
+java:S1075¨"ARefactor your code to get this URI from a customizable parameter.(ŽÅÐÌ8ª”Ô­ÿ.
+v
+java:S1192#"TDefine a constant instead of duplicating this literal "2021-01-07 14:42:58" 4 times.(ÖÏ¶Žùÿÿÿÿ8ª”Ô­ÿ.
+X	java:S1256"<This block of commented-out lines of code should be removed.(ßÁªÏ8ª”Ô­ÿ.
+X	java:S125*"<This block of commented-out lines of code should be removed.(žëß8ª”Ô­ÿ.
+c
+java:S1075|"ARefactor your code to get this URI from a customizable parameter.(óçÊÏÿÿÿÿÿ8ª”Ô­ÿ.
+y
+java:S1192."WDefine a constant instead of duplicating this literal "ä½ç½®å®šä½ï¼ˆBç±»ï¼‰" 3 times.(îƒÁ‚ûÿÿÿÿ8ª”Ô­ÿ.
+W
+java:S1191"5Use classes from the Java API instead of Sun classes.(µõ³‚øÿÿÿÿ8ª”Ô­ÿ.
+n
+java:S1192/"QDefine a constant instead of duplicating this literal "5000å…ƒæœåŠ¡åŒ…" 3 times.(¥¹­©8ª”Ô­ÿ.
+w
+java:S1192¤"TDefine a constant instead of duplicating this literal "2021-03-02 22:15:00" 3 times.(ùò™šøÿÿÿÿ8É£öÏ–/

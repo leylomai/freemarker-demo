@@ -127,3 +127,9 @@ C
 freemarker-demo.iml,a\4\a4440b8eb4e8d6412e7a91fef9fbd31918f5875e
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+n
+>src/main/java/com/example/freemarkerdemo/entity/GoodsInfo.java,f\5\f58e95772c13cf81182c1675243153f41789568e
+o
+?src/main/java/com/example/freemarkerdemo/entity/PayedOrder.java,d\6\d638de5b51c3c8943710f1b326915e057b4235d0
+w
+Gsrc/main/java/com/example/freemarkerdemo/FreeMarkerDemoApplication.java,a\6\a6a79759b9392ef9ed600b84edbb8b6b06c2a2e7
